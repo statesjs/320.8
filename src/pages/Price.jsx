@@ -1,10 +1,9 @@
-import "dotenv/config.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function Price(props) {
   // Our api key from coinapi.io.
-  const apiKey = process.env.API;
+  const apiKey = import.meta.env.VITE_API;
   // Grabbing the currency symbol from the URL Params.
   const params = useParams();
   const symbol = params.symbol;
